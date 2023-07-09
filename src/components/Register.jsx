@@ -8,15 +8,15 @@ function Register({ onRouteChange, loadUser }) {
   const [error, setError] = useState('')
 
   const onSubmitRegister = (e) => {
+    console.log(name, email, password)
     e.preventDefault()
-    fetch('https://smart-brain-backend.up.railway.app/register', {
+    fetch('https://smartbrain-api25.fly.dev/register', {
       method: 'post',
-      mode: 'no-cors',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        email,
-        password,
-        name,
+        email: email,
+        name: name,
+        password: password,
       }),
     })
       .then((response) => response.json())

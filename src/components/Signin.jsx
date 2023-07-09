@@ -7,9 +7,8 @@ function Signin({ onRouteChange, loadUser }) {
 
   const onSubmitSignIn = (e) => {
     e.preventDefault()
-    fetch('https://smart-brain-backend.up.railway.app/signin', {
+    fetch('https://smartbrain-api25.fly.dev/signin', {
       method: 'post',
-      mode: 'no-cors',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         email,

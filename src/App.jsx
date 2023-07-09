@@ -78,7 +78,6 @@ function App() {
 
     const requestOptions = {
       method: 'POST',
-      mode: 'no-cors',
       headers: {
         Accept: 'application/json',
         Authorization: 'Key ' + PAT,
@@ -97,7 +96,7 @@ function App() {
       .then((response) => response.json())
       .then((result) => {
         if (result) {
-          fetch('https://smart-brain-backend.up.railway.app/image', {
+          fetch('https://smartbrain-api25.fly.dev/image', {
             method: 'put',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
